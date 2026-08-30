@@ -1,0 +1,17 @@
+# Feature extraction (scripts/extract_echoprime_embeddings.py, scripts/extract_detections.py)
+torch>=2.0
+torchvision>=0.15
+numpy>=1.24
+opencv-python>=4.8
+h5py>=3.8
+pandas>=2.0
+tqdm>=4.65
+ultralytics>=8.3       # RT-DETR structure detector
+
+# Report generation (model.py, scripts/generate_report.py)
+transformers>=4.51    # Qwen3 support
+peft>=0.13
+accelerate>=1.0
+safetensors>=0.4
+pyyaml>=6.0
+huggingface_hub>=0.24  # downloading checkpoints, see README

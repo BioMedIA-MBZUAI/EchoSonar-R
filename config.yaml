@@ -1,0 +1,6 @@
+model_name: "Qwen/Qwen3-8B"
+clip_dim: 768   
+detr_dim: 256   
+
+lora_r: 16
+lora_alpha: 32

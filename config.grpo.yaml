@@ -1,0 +1,16 @@
+# EchoSonar GRPO (stage 2) inference config -- used by scripts/generate_report.py.
+#
+# The GRPO LoRA adapter was trained on top of the stage-1 SFT full-finetune
+# checkpoint, not raw Qwen3-8B (see adapter_config.json's
+# base_model_name_or_path on HuggingFace) -- model_name below assumes you
+# downloaded sft/ to checkpoints/sft/ per the README's "Report generation"
+# section. Point --checkpoint at checkpoints/grpo when using this config.
+
+model_name: "checkpoints/sft/llm"
+clip_dim: 768   # EchoPrime token width, see echosonar.constants.TOKEN_DIM
+detr_dim: 256   # RT-DETR decoder query width, see echosonar.constants.DETR_DIM
+
+lora_r: 64
+lora_alpha: 128
+
+full_finetune: false
